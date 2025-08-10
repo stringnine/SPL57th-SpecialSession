@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For SPL 57th</title>
+    
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <section id="login-screen">
+        <div class="card">
+            <h2 class="login-title">SPL 57th 여러분,<br>환영합니다</h2>
+
+            <p class="login-description">
+                지난 16주의 추억이 담긴 <span class="login-highlight">갤러리,</span><br>
+                그리고 <span class="login-highlight">스위치 PT 세션</span>을 위한<br>
+                <span class="login-highlight">57기만의 공간</span>입니다.
+            </p>
+
+            <div class="card-actions">
+                <button id="login-btn">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+                    Start with Google
+                </button>
+                <p class="login-sub-text">57기 아니면 못 들어옴(진짜임)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="code-screen" class="hidden">
+        <div class="card">
+            
+            <div class="card-content">
+                <h2 class="code-title">초대코드를 입력해주세요</h2>
+                <p class="code-description">카톡에 공지된 초대코드를 입력해주세요.</p>
+                <label for="code-input">초대코드</label>
+                <input type="text" id="code-input" placeholder="초대코드 입력 ㄱㄱ">
+            </div>
+
+            <div class="card-actions">
+                <button id="code-submit-btn">인증하기</button>
+                <div class="notice">
+                    <p class="notice-title">안내사항</p>
+                    <ul>
+                        <li>초대코드는 처음 로그인 시에만, 필요합니다.</li>
+                        <li>57기 외의 사람에게 코드를 공유하지 말아주세요.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="profile-screen" class="hidden">
+        <div class="card">
+            <h2 class="profile-title">프로필을 설정해주세요</h2>
+        
+            <div class="profile-pic-container">
+                <img src="img\profile.png" alt="기본 프로필 사진" id="profile-pic-preview">
+                <div class="profile-pic-edit-button">
+                    <img src="img\camera.png" alt="프로필 사진 추가" id="profile-pic-preview">
+                </div>
+            </div>
+            
+            <div class="nickname-form">
+                <label for="nickname-input">닉네임</label>
+                <div class="input-with-button">
+                    <input type="text" id="nickname-input" placeholder="닉네임 입력 ㄱㄱ">
+                    <button id="check-nickname-btn">중복확인</button>
+                </div>
+                <p class="nickname-guide">한글/영문/숫자를 활용해 최대 10자 이내로<br> 입력해주세요.</p>
+            </div>
+            
+            <button id="signup-btn" class="btn-primary" >회원가입</button>          
+        </div>
+    </section>
+
+    <section id="welcome-screen" class="hidden">
+        <div class="card">
+            <h2 id="welcome-message"></h2>
+            <div class="welcome-image-container">
+                <img src="img/welcome.png" alt="환영 이미지">
+            </div>
+            <button id="start-btn" class="btn-primary">시작하기</button>
+        </div>
+    </section>
+
+
+
+    <section id="main-content" class="hidden">
+        <div class="main-header">
+            <h2>오로라 여러분 하이~^^</h2>
+            <p>재미로 만들어봤으니 cute하게 봐주세요 ^0^</p>
+        </div>
+
+        <div class="content-section">
+            <h3 class="gallery-title">갤러리, <span class="gallery-highlight">이 안에 너 있다.</span></h3>
+            <a href="gallery.html" class="card-link">
+                <div class="content-card">
+                    <img src="img/Gallery.png" alt="갤러리 이미지">
+                </div>
+            </a>
+        </div>
+
+        <div class="content-section">
+            <h3 class="switch_pt-title">스위치 PT, <span class="switch_pt-highlight">재밌을거임.</span></h3>
+            <a href="switch_pt.html" class="card-link">
+                <div class="content-card">
+                    <img src="img/switch_PT.png" alt="스위치 PT 이미지">
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

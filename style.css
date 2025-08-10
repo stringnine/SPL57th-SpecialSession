@@ -1,0 +1,392 @@
+/* 기본 스타일 리셋 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;    
+    background-color: #F5F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 콘텐츠가 길어질 수 있으므로 상단 정렬 */
+    min-height: 100vh;
+    color: #333;
+    padding-top: 5vh; /* 화면 상단에 약간의 여백 */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* 모바일 화면 크기 기준 */
+    padding: 20px;
+}
+
+section {
+    width: 100%;
+}
+
+/* 카드 공통 스타일 */
+.card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(154, 143, 143, 0.25);
+    text-align: center;
+    height: 420px;
+    width: 100%;
+    max-width: 373px;
+    display: flex;            /* Flexbox 기능을 켭니다. */
+    flex-direction: column;   /* 자식 요소들을 세로로 쌓습니다. */  
+    ;  /* 이제 이 속성이 정상적으로 작동합니다. */
+   
+}
+
+
+/* 로그인 화면 */
+.login-title {
+    font-size: 2.3rem; /* 로그인 제목 폰트 크기 (40px) */
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: left;
+    transform: translate(14px, -5px); 
+}
+
+.login-description {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #6E6E73;
+    line-height: 2.0;
+    margin-bottom: 30px;
+    /* 여기에 로그인 설명만의 스타일 추가 가능 */
+}
+
+.login-highlight {
+    color: #000000; 
+    font-weight: 610;
+}
+
+
+
+
+p.login-sub-text {
+    margin-top: 10px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000000;
+}
+
+/* 로그인 버튼*/
+#login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+}
+
+#login-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 초대코드 화면 */
+.code-title {
+    font-size: 1.875rem; /* 초대코드 제목 폰트 크기 (28.8px) */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 0;
+    text-align: left;
+}
+
+p.code-description {
+    font-size: 0.9375rem; /* 초대코드 설명 폰트 크기 (15px) */
+    font-weight: 450;
+    color: #6E6E73;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/* 버튼 및 입력창 */
+button {
+    width: 100%;
+    padding: 15px;
+    border: 1.0px solid #AFA8A8;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* 초대코드화면 - 초대코드 */
+label {
+    display: block;
+    text-align: left;
+    font-size: 0.9375rem;
+    font-weight: 450;
+    color: #4B4B4F;
+    margin-bottom: 6px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #AFA8A8;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+#code-submit-btn {
+    background-color: #0071E3; /* iOS 스타일의 파란색 */
+    color: #ffffff;
+    border: none;
+}
+
+/* 초대코드 화면 - 안내사항 */
+.notice {
+    margin-top: 35px;
+    text-align: left;
+    font-size: 0.9375rem;
+    font-weight: 450;
+    color: #6E6E73;
+}
+
+.notice-title {
+    color: #2A2A2C;
+    margin-bottom: 5px;
+}
+
+.notice ul {
+    list-style-type: none;
+    padding-left: 0px;
+    line-height: 20px;
+}
+
+.notice ul li::before {
+    content: '·';
+    margin-right: 5px;
+}
+
+
+/* 프로필 설정 화면 */
+.profile-title {
+    font-size: 1.875rem; /* 초대코드 제목 폰트 크기 (28.8px) */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    line-height: 0;
+    text-align: center;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 0px; /* 위아래 자동 중앙 정렬 후 아래 여백 */
+}
+
+#profile-pic-preview {
+    width: 100%;
+    height: 100%;   
+}
+
+.profile-pic-edit-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nickname-form {
+    width: 100%;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 27px;
+}
+
+/*닉네임 문구 */
+.nickname-form label {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #000000;
+}
+
+.input-with-button {
+    display: flex;
+    gap: 0px;
+}
+
+.input-with-button {
+    position: relative; /* 자식 요소(버튼) 위치의 기준점이 됨 */
+}
+
+#nickname-input {
+    /* 기존 input 스타일에 이 한 줄을 추가해주세요 */
+    padding-right: 10px; /* 중복확인 버튼이 들어갈 공간 확보 */
+}
+
+#check-nickname-btn {
+    /* 위치 설정 (기존과 동일) */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-80%);
+
+    /* --- 크기 조절 (핵심 수정 부분) --- */
+    width: auto; /* 너비를 내용물(글자)에 맞춤 */
+    height: auto; /* 높이를 내용물(글자)에 맞춤 */
+    padding: 5px; /* 글자 주변에 약간의 클릭 여유 공간만 줌 */
+
+    /* 모양 설정 (기존과 동일) */
+    background: none;
+    border: none;
+    color: #0071E3;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nickname-guide {
+    font-size: 0.9375rem;
+    font-weight: 450;
+    color: #6E6E73;
+    margin-top: -15px;
+}
+
+#signup-btn:hover {
+    background-color: #0071E3; /* 호버 시에도 원래의 파란색 유지 */
+}
+
+.btn-primary {
+    background-color: #0071E3;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+}
+
+
+/* 환영 화면 스타일 */
+#welcome-screen .card {
+    text-align: left; 
+}
+
+.welcome-image-container {
+    max-width: 244px; /* 이미지 최대 너비 설정 */
+    margin: 3px auto; /* 가운데 정렬 및 위아래 마진 */
+}
+
+.welcome-image-container img {
+    width: 100%; /* 컨테이너에 맞춰 이미지 너비 조정 */
+    height: auto;
+}
+
+#welcome-message {
+    font-size: 1.875rem;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+#start-btn {
+    margin-top: 20px;
+}
+
+#start-btn:hover {
+    background-color: #0071E3; /* 호버 시에도 원래의 파란색 유지 */
+}
+
+
+/* 메인 콘텐츠 화면 */
+.main-header {
+    text-align: left;
+    margin-bottom: 50px;
+}
+.main-header h2 { font-size: 2.5rem; }
+.main-header p { color: #6E6E73; }
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+
+.content-card img {
+    width: 100%;
+    display: block;
+}
+
+
+
+.gallery-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    transform: translate(13px, 0px);
+}
+
+.switch_pt-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    transform: translate(13px, 0px); 
+}
+
+.gallery-highlight {
+    color: #6E6E73; 
+    font-weight: 700;
+}
+
+.switch_pt-highlight {
+    color: #6E6E73; 
+    font-weight: 700;
+}
+
+
+
+/* 화면 숨기기 */
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+/* 링크 기본 스타일 제거 */
+.card-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit;      /* 부모 요소의 글자색을 그대로 사용 */
+}
+
+/* 카드에 마우스를 올렸을 때 효과 */
+.content-card {
+    /* 부드러운 전환 효과를 위해 transition 추가 */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-link:hover .content-card {
+    transform: translateY(-5px); /* 살짝 위로 올라가는 효과 */
+    
+    cursor: pointer;
+}
