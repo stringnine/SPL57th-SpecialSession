@@ -44,7 +44,8 @@ section {
 
 @media (max-width: 400px) {
     .card {
-        min-height: 420px;
+        height: auto;
+        min-height: auto;
         padding: 40px 25px; /* 좌우 여백을 조금 더 확보 */
     }
 }
