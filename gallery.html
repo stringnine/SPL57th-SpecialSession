@@ -2,10 +2,40 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>갤러리</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리 - SPL 57th</title>
+    
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>갤러리 페이지입니다.</h1>
-    <a href="index.html">메인으로 돌아가기</a>
+
+    <div class="gallery-container">
+        <header class="gallery-header">
+            <h1>SPL 57th<br>16 Session</h1>
+            <a href="index.html" class="back-link">메인으로 돌아가기</a>
+        </header>
+
+        <main class="week-grid">
+            </main>
+    </div>
+
+    <script>
+        // 이미지 링크를 생성할 부모 요소를 선택
+        const gridContainer = document.querySelector('.week-grid');
+
+        // 16주차까지 반복하면서 이미지 링크 생성
+        for (let i = 1; i <= 16; i++) {
+            // 각 이미지 링크의 HTML 구조를 정의 (a 태그가 img 태그를 감싸는 단순한 구조)
+            const imageLinkHTML = `
+                <a href="week-detail.html?week=${i}" class="week-image-link">
+                    <img src="img/week${i}.png" alt="${i}주차 갤러리 바로가기">
+                </a>
+            `;
+            
+            // 생성된 HTML을 부모 요소에 추가
+            gridContainer.innerHTML += imageLinkHTML;
+        }
+    </script>
 </body>
 </html>
